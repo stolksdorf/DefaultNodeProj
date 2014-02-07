@@ -51,10 +51,12 @@ app.get('/', function(req,res){
 });
 
 app.get('/thing/:thingid', function(req,res){
-	res.end(render('thingPage.html', {
-		test : 'wooo',
-		gifs : 'wooooooo'
-	}));
+	Things.findById(req.params.thingid, function(err, thing){
+		if(err || !thing) return res.send(500, "Can't find thing");
+		res.end(render('thingPage.html', {
+			thing : JSON.stringify(thing)
+		}));
+	});
 });
 
 app.get('*', function(req,res){

@@ -11,7 +11,7 @@
 - Clone it down, `git clone git@github.com:stolksdorf/sample_proj.git`
 - Create a new app at Heroku
 - Add it to your repo, `git remote add heroku git@heroku.com:sample_proj.git`
-- 'git push origin master` updates your github repo
+- `git push origin master` updates your github repo
 - `git push origin heroku` deploys your app to Heroku
 
 
@@ -24,7 +24,7 @@
 	- `npm install mongoose --save`
 	- `npm install underscore --save`
 - Add MongoDB to your project. `heroku addons:add mongohq`
-- Copy in `modules`, `public`, `views`, app.js`, `Procfile`
+- Copy in `modules`, `public`, `views`, `app.js`, and `Procfile`
 
 ###Run your App
 - `node app.js` will start your server listening on port 5000
@@ -42,7 +42,7 @@
 - `node_modules` - Code for the node packages we pulled in using `npm` are stored here. Don't touch.
 - `app.js` - Our heart of our apllication. Setups up our server and declares any resources we need.
 - `package.json` - Machine readable description of our project. Let's Heroku know what it should do with the project.
-- 'Procfile' - Command(s) that Heroku will run when it spins up a dyno.
+- `Procfile` - Command(s) that Heroku will run when it spins up a dyno.
 
 
 ###Client Side
